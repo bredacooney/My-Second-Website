@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link type="text/css" rel="stylesheet" href="style.css" />
+  <title>Canvas</title>
+
+  <link rel="stylesheet" href="canvas.css" />
+</head>
+
+<body>
+  <nav>
+    <ul class="navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="form.html">Form</a></li>
+      <li class="selected">Canvas</a></li>
+      <li><a href="transitions.html">Transitions/Image</a></li>
+      <li><a href="catalog.html">Catalog</a></li>
+      <li><a href="geolocation.html">Geolocation</a></li>
+      <li><a href="local storage/storage.html">Storage</a></li>
+      <li><a href="jquery.html">Jquery</a></li>
+
+    </ul>
+  </nav>
+
+  <h1>Drawing on Canvas</h1>
+
+  <!-- 
+            We give the canvas an ID so we can select it in JS (and CSS)
+            We also define width and height of the canvas (like we do with images) 
+        -->
+  <canvas id="myCanvas" width="300" height="300"></canvas>
+
+  </li>
+  </ul>
+
+  <script>
+    const canvas = document.getElementById("myCanvas");
+
+    // We need a "context" to draw in, 2d is for all 2 dimensional drawings
+    // The context object has methods and properties that do the actual drawing
+    const context = canvas.getContext("2d");
+
+    // Set fill colour of shape(s) we are about to draw
+    // We can use the same colour values we use in CSS (Hexadecimal, RGB, named colours, etc.)
+    // Every filled shape we draw after this will use this colour (until we change it)
+    context.fillStyle = "red";
+
+    // To draw a rectangle filled with a solid colour in the top left corner...
+    // coords: x=0 and y=0, width=50px, height=50px
+    // The rectangle will be filled with whatever colour is currently set as the fillStyle
+    context.fillRect(0, 0, 50, 50);
+
+    context.fillRect(70, 0, 50, 50);
+    context.fillRect(130, 0, 50, 50);
+    context.fillRect(190, 0, 50, 50);
+
+    // To draw a rectangle filled with a solid colour in the top right corner...
+    // coords: x=250 and y=0, width=50px, height=50px
+    // Why x=250? WIDTHOFCANVAS - WIDTHOFRECTANGLE = POSITION OF TOP LEFT CORNER OF RECTANGLE
+    context.fillRect(250, 0, 50, 50);
+    context.fillRect(250, 70, 50, 50)
+    context.fillRect(250, 130, 50, 50);
+    context.fillRect(250, 190, 50, 50);
+    // To draw a rectangle filled with a solid colour in the bottom left corner...
+    // coords: x=0 and y=250, width=50px, height=50px
+    // Why y=250? HEIGHTOFCANVAS - HEIGHTOFRECTANGLE = POSITION OF TOP LEFT CORNER OF RECTANGLE
+    context.fillRect(0, 250, 50, 50);
+    // context.fillRect(60, 250, 50, 50);
+    // context.fillRect(120, 250, 50, 50);
+    // context.fillRect(180, 250, 50, 50);
+    context.fillRect(0, 190, 50, 50);
+    context.fillRect(0, 130, 50, 50);
+    context.fillRect(0, 70, 50, 50);
+
+    // To draw a rectangle filled with a solid colour in the bottom right corner...
+    // coords: x=250 and y=250, width=50px, height=50px
+    // Why y=75? (CA      context.fillRect(0, 190, 50, 50);NVASHEIGHT - HEIGHTOFRECTANGLE) / 2
+
+    context.fillRect(250, 250, 50, 50);
+    context.fillRect(190, 250, 50, 50);
+    context.fillRect(130, 250, 50, 50);
+    context.fillRect(70, 250, 50, 50);
+
+    // Change the colour we are drawing in
+    // Every filled shape we draw after this will use this colour (until we change it)
+    context.fillStyle = "blue";
+
+    // To draw a rectangle filled with a solid colour in the middle of the canvas...
+    // coords: x=25 and y=25, width=150px, height=150px
+    // Why x=75? (CANVASWIDTH - WIDTHOFRECTANGLE) / 2
+    // Why y=75? (CANVASHEIGHT - HEIGHTOFRECTANGLE) / 2
+    context.fillRect(75, 75, 150, 150);
+
+    // To draw a circle filled with a solid colour and with a border in the middle of the screen
+    // coords: x=150 and y=150, circle will have radius of 50px
+    // For arcs/circles, the coordinates specify the center of the circle
+    // x=150 and y=150 is right in the middle of the canvas
+    context.beginPath(); // start a path
+    context.arc(150, 150, 50, 0, 2 * Math.PI, false); // Draw the circle
+    context.fillStyle = "darkorange"; // Specify the fill colour
+    context.fill(); // Fill the circle
+    context.lineWidth = 5; // Specify the border (stroke) width
+    context.strokeStyle = "indigo"; // Specify the border (stroke) colour
+    context.stroke(); // Draw the border (stroke) on the circle
+    context.closePath(); // End the path
+
+    context.beginPath(); // start a path
+    context.arc(100, 100, 20, 0, 2 * Math.PI, false); // Draw the circle
+    context.fillStyle = "darkorange"; // Specify the fill colour
+    context.fill(); // Fill the circle
+    context.lineWidth = 5; // Specify the border (stroke) width
+    context.strokeStyle = "indigo"; // Specify the border (stroke) colour
+    context.stroke(); // Draw the border (stroke) on the circle
+    context.closePath(); // End the path
+
+    context.beginPath(); // start a path
+    context.arc(200, 200, 20, 0, 2 * Math.PI, false); // Draw the circle
+    context.fillStyle = "darkorange"; // Specify the fill colour
+    context.fill(); // Fill the circle
+    context.lineWidth = 5; // Specify the border (stroke) width
+    context.strokeStyle = "indigo"; // Specify the border (stroke) colour
+    context.stroke(); // Draw the border (stroke) on the circle
+    context.closePath(); // End the path
+
+    context.beginPath(); // start a path
+    context.arc(148, 148, 20, 0, 2 * Math.PI, false); // Draw the circle
+    context.fillStyle = "darkorange"; // Specify the fill colour
+    context.fill(); // Fill the circle
+    context.lineWidth = 5; // Specify the border (stroke) width
+    context.strokeStyle = "indigo"; // Specify the border (stroke) colour
+    context.stroke(); // Draw the border (stroke) on the circle
+    context.closePath(); // End the path
+
+  </script>
+</body>
+
+</html>

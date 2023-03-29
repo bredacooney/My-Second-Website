@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!--taken from my second website-->
+  <meta charset="utf-8" />
+  <!-- <title>Form Validation</title> -->
+  <link rel="stylesheet" href="form.css" />
+</head>
+
+<body>
+  <nav>
+    <ul class="navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li class="selected">Form</a></li>
+      <li><a href="canvas.html">Canvas</a></li>
+      <li><a href="transitions">Transitions/Image</a></li>
+      <li><a href="catalog">Catalog</a></li>
+      <li><a href="geolocation.html">Geolocation</a></li>
+      <li><a href="local storage/storage.html">Storage</a></li>
+      <li><a href="jquery.html">Jquery</a></li>
+
+    </ul>
+  </nav>
+  <br>
+  <br>
+  <title>Form Validation</title>
+
+  <div class="page-container">
+    <h1>Form Validation</h1>
+
+    <form id="myForm" action="" novalidate>
+      <div class="form-control">
+        <label for="fullName">Your full name</label>
+        <input required id="fullName" type="text" name="full_name" />
+        <div class="field-error"></div>
+      </div>
+
+      <div class="form-control">
+        <label for="emailAddress">Your email</label>
+        <input required id="emailAddress" type="email" name="email_address" />
+        <div class="field-error"></div>
+      </div>
+      <!--age-->
+      <div class="form-control">
+        <label for="age">your age </label>
+        <input id="age" type="number" name="age" min="1" max="150" />
+        <div class="field-error"></div>
+        <!--got from galway site-->
+      </div>
+
+      <!--textarea-->
+      <div class="form-control">
+        <label for="story">add Your story</label>
+        <textarea id="story" name="story"></textarea>
+      </div>
+
+      <input type="submit" value="Go!" />
+    </form>
+  </div>
+  <script src="form.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>JQuery</title>
+    <link rel="stylesheet" href="grouping.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p").click(function () {
+                $(this).hide();
+            });
+        });
+    </script>
+    <Style>
+        p {
+            font-style: italic;
+            font-weight: bold;
+            color: rgb(0, 255, 115)
+        }
+    </Style>
+</head>
+
+<body>
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="transitions.html">Transitions/Image</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="geolocation.html">Geolocation</a></li>
+            <li><a href="local storage/storage.html">Storage</a></li>
+            <li class="selected">Jquery</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        document.body.style.backgroundColor = "grey";    
+    </script>
+    <br>
+    <br>
+    <p>If you click on me, I will disappear.</p>
+    <br>
+    <br>
+    <p>Click me away!</p>
+    <br>
+    <br>
+    <p>Click me too!</p>
+
+</body>
+
+</html>

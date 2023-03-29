@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transitions</title>
+  <link rel="stylesheet" href="transitions.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <style>
+    .banner .flag {
+      display: flex;
+    }
+
+    /* getting the nav bar with bullet points and going horizontal */
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      /* background-color: #657b4b; */
+    }
+
+    li {
+      float: left;
+      font-size: 1.5em;
+    }
+
+    li a {
+      display: block;
+      padding: 8px;
+      font-size: 1em;
+    }
+
+    .navigation {
+      border: 1px 1px 1px 1px;
+      color: #4c0072;
+      border-style: solid;
+      list-style-type: none;
+      margin: 0;
+      padding: 2px 5px;
+      display: flex;
+      background-color: #d9eece;
+    }
+
+    .navigation li {
+      text-decoration: none;
+      color: #680000;
+      font-style: bold;
+      display: block;
+      padding: 0.9 1em;
+      font-size: 2em;
+      background-color: #c1ff4d;
+      border-radius: 8px;
+      /* transition: background-color 0.5s ease-in-out color 0.5s ease-in-out;  */
+      /* transitions out and in take .5 seconds... */
+    }
+
+    .navigation a:hover {
+      background-color: #c4e881;
+    }
+
+    .navigation .selected {
+      border: 2px solid red;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul class="navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="form.html">Form</a></li>
+      <li><a href="canvas.html">Canvas</a></li>
+      <li class="selected">Transitions/Image</a></li>
+      <li><a href="catalog.html">Catalog</a></li>
+      <li><a href="geolocation.html">Geolocation</a></li>
+      <li><a href="local storage/storage.html">Storage</a></li>
+      <li><a href="jquery.html">Jquery</a></li>
+
+    </ul>
+  </nav>
+
+  <h1>Transitions</h1>
+  <div class="animation">Css animation</div>
+  <br />
+  <br />
+  <br />
+  <main>
+    <!--A simple transition applied to <a> selector in the CSS-->
+    <!-- <section class="transition-links"> -->
+    <!-- <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition" -->
+    <!-- >I am a transation link!</a -->
+    <!-- > -->
+    <!-- </section> -->
+
+    <section class="transition-classes">
+      <!--Transition on classes = This button & target will be manipulated 
+        when triggered by the button ad 'heard' by the eventlistener--->
+      <p>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <!-- <button class="trigger">Change the target</button> -->
+      </p>
+      <!-- <div class="target">I am the target element!</div> -->
+    </section>
+    <br />
+    <br />
+    <br />
+    <div class="section">
+      <!-- this is creating the outer div-->
+      <div class="banner">
+        <!-- image div-->
+        <h2>
+          <strong>Image No. 1</strong> When you move accross this image , part of the dogs
+          colour changes to" Colour Sepia".<br />
+          <strong>Image No. 2 </strong>(Middle Image) Click on the image, and it changes to
+          another image.<br />
+          <strong> Image No. 3</strong> When you move accross this image , part of the dogs
+          colour changes to "Colour Greyscale".<br />
+        </h2>
+        <br>
+        <br>
+        <strong>Image No.1</strong>------------------------------------------------------<strong>Image No.2</stromg>
+
+          <br>
+          <br>
+          <!-- Image No. 1 -->
+          <img src="images/IMG_0044.jpg" class="w3-hover-grayscale" alt="Picture of Brax" width="447 px" />
+          <a href="http://127.0.0.1:5500/My%20second%20website/images/IMG_0330.jpg"><img src="images/IMG_0044.jpg"
+              width="450" alt="Picture of Brax" /></a>
+          <br>
+          <br>
+          Image No.3
+          <img src="images/IMG_0044.jpg" class="w3-hover-sepia" alt="Picture of Brax" width="440" />
+      </div>
+      <br>
+      <br>
+      <!-- </div> -->
+      <!-- </section> -->
+
+      <!-- <div class="section">   -->
+      <!-- this is creating the outer div-->
+      <!-- <div class="flag"> -->
+      <!--image div-->
+
+      <!-- </div> -->
+
+      <!-- to make image change to a different image when clicked on   -->
+
+      <!-- qualities div-->
+    </div>
+  </main>
+
+  <script>
+      /*java script*/ AbortSignal;
+    // First section
+    const transition = dcoument.querySelector(".transition-link");
+    transition.addEventListener("transitioned", () => {
+      //console.log('Transition ended');
+      //alert('transition ended');
+      document.getElementsByTagName("a")[0].innerHTML = "Transition Ended!";
+    });
+
+    const trigger = document.querySelector(".trigger");
+    const target = document.querySelector(".target");
+
+    trigger.addEventListener("click", changeTarget);
+
+    function changeTarget() {
+      // target.classList.toggle("active-target");
+      target.classlist.add("added");
+
+
+    }
+  </script>
+</body>
+
+</html>
