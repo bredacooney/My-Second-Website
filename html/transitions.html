@@ -7,20 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Transitions</title>
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="transitions.css" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="../css/transitions.css" />
+
   <style>
     .banner .flag {
       display: flex;
     }
 
-    /* getting the nav bar with bullet points and going horizontal */
+    /* getting the nav bar with bullet points and going horizontal 
     ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
       overflow: hidden;
-      /* background-color: #657b4b; */
+      background-color: #657b4b;
     }
 
     li {
@@ -33,7 +34,7 @@
       padding: 8px;
       font-size: 1em;
     }
-
+*/
     /* .navigation { 
       border: 1px 1px 1px 1px;
       color: #4c0072;
@@ -83,48 +84,45 @@
 
     </ul>
   </nav>
-
-  <h1>Transitions</h1>
-  <div class="animation">Css animation</div>
-  <br />
-  <br />
-  <br />
   <main>
-    <!--A simple transition applied to <a> selector in the CSS-->
-    <!-- <section class="transition-links"> -->
-    <!-- <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition" -->
-    <!-- >I am a transation link!</a -->
-    <!-- > -->
-    <!-- </section> -->
+    <h1>Transitions</h1>
+    <div class="animation">CSS animation</div>
+    <br />
+    <br />
+    <br />
 
-    <section class="transition-classes">
-      <!--Transition on classes = This button & target will be manipulated 
-        when triggered by the button ad 'heard' by the eventlistener--->
+    <p>A simple transition applied to selector in the CSS.</p>
+
+    <section class="transition-links">
       <p>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <!-- <button class="trigger">Change the target</button> -->
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">I am also a link to transition info!
+        </a>
       </p>
-      <!-- <div class="target">I am the target element!</div> -->
     </section>
+
+    <!-- <section class="transition-classes">
+      <!--Transition on classes = This button & target will be manipulated 
+        when triggered by the button and 'heard' by the eventlistener--->
+    <!--  <p>
+        <button class="trigger">Change the target</button>
+      </p>
+      <div class="target">I am the target element!</div>
+    </section> -->
     <br />
-    <br />
-    <br />
+    <h2>CSS Effects</h2>
+
     <div class="section">
       <!-- this is creating the outer div-->
       <div class="banner">
         <!-- image div-->
-        <h2>
+        <p>
           <strong>Image No. 1</strong> When you move accross this image , part of the dogs
           colour changes to" Colour Sepia".<br />
           <strong>Image No. 2 </strong>(Middle Image) Click on the image, and it changes to
           another image.<br />
           <strong> Image No. 3</strong> When you move accross this image , part of the dogs
           colour changes to "Colour Greyscale".<br />
-        </h2>
+        </p>
         <br>
         <br>
         <strong>Image No.1</strong>------------------------------------------------------<strong>Image No.2</stromg>
@@ -132,31 +130,27 @@
           <br>
           <br>
           <!-- Image No. 1 -->
-          <img src="images/IMG_0044.jpg" class="w3-hover-grayscale" alt="Picture of Brax" width="447px" />
-          <a href="images/IMG_0330.jpg">
-            <img src="images/IMG_0044.jpg" width="450" alt="Picture of Brax" />
+          <img src="../images/IMG_0044.jpg" class="w3-hover-grayscale" alt="Picture of Brax" width="447px" />
+          <a href="../images/IMG_0330.jpg">
+            <img src="../images/IMG_0330.jpg" width="450" alt="Picture of Brax" />
           </a>
           <br>
-          <br>
+
           Image No.3
-          <img src="images/IMG_0044.jpg" class="w3-hover-sepia" alt="Picture of Brax" width="440" />
+          <img src="../images/IMG_0044.jpg" class="w3-hover-sepia" alt="Picture of Brax" width="440" />
       </div>
       <br>
       <br>
       <!-- </div> -->
       <!-- </section> -->
-
-      <!-- <div class="section">   -->
-      <!-- this is creating the outer div-->
-      <!-- <div class="flag"> -->
-      <!--image div-->
-
-      <!-- </div> -->
-
-      <!-- to make image change to a different image when clicked on   -->
-
-      <!-- qualities div-->
-    </div>
+      <div class="section">
+        <!-- this is creating the outer div-->
+        <div class="flag">
+          <!--image div-->
+        </div>
+        <!-- to make image change to a different image when clicked on   -->
+        <!-- qualities div-->
+      </div>
   </main>
 
   <script>

@@ -9,29 +9,39 @@ h4 {
 }
 
 body {
-  font-family: sans-serif;
   margin: 0;
   padding: 2em;
 }
 
-.transition-links,
+/* .transition-links, */
 /*for css*/
-.jstransition-classes {
-  /*for Js*/
-  border: 1px solid #ccc;
-  border-radius: 8px;
+/* .jstransition-classes { */
+/*for Js*/
+/* border: 1px solid #ccc; */
+/* border-radius: 8px; */
+/* padding: 1em; */
+/* margin-bottom: 2em; */
+/* display: flex; */
+/* justify-content: center; */
+/*main axis*/
+/* align-items: center; */
+/* cross axis */
+/* } */
+
+.transition-links {
+  /* border: 1px solid #ccc; */
   padding: 1em;
   margin-bottom: 2em;
-  display: flex;
   justify-content: center;
   /*main axis*/
   align-items: center;
   /*cross axis*/
+
 }
 
-.jsTransition-classes {
+/* .jsTransition-classes {
   flex-direction: column;
-}
+} */
 
 /* These rules are the ones we are interested in */
 
@@ -39,40 +49,44 @@ body {
 
 /* Base style for the link */
 /* Note, when no pseudo-class is specified, styles apply to links in all states (link, hover, active, etc.) */
-/* 
- a { 
+
+.transition-links a {
   font-size: 2em;
-  padding: 3em;
+  padding: 1em;
   text-decoration: none;
   color: #000;
-  background-color: #ff944d;
+  background-color: #FF944D;
   border-radius: 8px;
 
-  /* transitions out and in takes .2 seconds....*
+}
+
+/* transitions out and in takes .2 seconds....*
   transition: background-color 0.5s ease-in-out color 0.5s ease-in-out;
  } */
 /* Style for the link when hovered */
-/* a:hover { 
+.transition-links a:hover {
   background-color: #d65600;
   color: #fff;
-  transition: background-color 0.5s ease-in-out color 0.5s ease-in-out;
-} */
+  transition: background-color 3s ease-in-out;
+}
 
 /* 2. Transitioning triggered by JavaScript */
-.target {
+/* .target {
   padding: 3em;
   color: #fff;
   border-radius: 16px;
   font-size: 2em;
   background-color: #4b1871;
   width: 25%;
+  transition: background-color 1s ease-in-out, font-size 1s ease-in-out;
 }
 
 .active-target {
   font-size: 3em;
   background-color: #8a2dd2;
-}
+} */
 
+/*////////--ANIMATION--////*/
 .animation {
   width: 100px;
   height: 100px;
