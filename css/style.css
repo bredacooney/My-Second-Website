@@ -11,16 +11,23 @@ h1 {
   background-color: rgb(0, 140, 255);
 }
 
+h3 {
+  background-color: yellow;
+  color: black;
+  padding: 10px;
+  font-style: italic;
+}
+
+main {
+  display: flex;
+}
+
 .section {
   /*  form */
   border: 2px solid black;
   margin: 30px 40px 30px 40px;
   padding: 50px;
   text-align: centre;
-}
-
-main {
-  display: flex;
 }
 
 .test {
@@ -35,7 +42,7 @@ p {
   font-style: italic;
   font-style: regular times new roman;
   font-weight: 1.5em;
-  padding: 3em;
+  /* padding: 3em; */
   text-align: center;
   color: black;
 }
@@ -60,51 +67,43 @@ li a {
   font-size: 1em;
 }
 
-/* .navigation {  
-  border: 1px 1px 1px 1px;
-  color: #4c0072;
-   border-style: solid; 
-  /* list-style-type: none; 
-  margin: 0;
-  padding: 5px 10px;*/
-/* display: flex; 
-  background-color: #d9eece;
-}*/
+/*/////////NAVIGATION////////*/
 .navigation {
+  /*navigation class on ul*/
+  /* border: 1px 1px 1px 1px; */
+  /* color: #4c0072; */
+  border-style: solid;
   list-style-type: none;
   margin: 0;
-  padding: 2px 5px;
-  /* background-color: rgb(0, 110, 255); */
-  background-color: #d9eece;
-  display: flex;
+  padding: 0;
+  /*5px 10px;*/
+  /* background-color: #d9eece; */
+  background-color: rgb(0, 110, 255);
 }
 
-.navigation li {
-  text-decoration: none;
-  color: #680000;
-  font-style: bold;
-  display: block;
-  padding: 0.9 1em;
-  font-size: 2em;
-  background-color: #c1ff4d;
-  border-radius: 8px;
-  /* transition: background-color 0.5s ease-in-out color 0.5s ease-in-out;  */
-  /* transitions out and in take .5 seconds... */
-}
-
-.navigation a:hover {
-  background-color: #c4e881;
+@media screen and (min-width: 30em) {
+  .navigation {
+    display: flex;
+  }
 }
 
 .navigation .selected {
-  border: 2px solid red;
+  border: 3px solid #00488d;
+  font-weight: bold;
 }
 
-h3 {
-  background-color: yellow;
-  color: black;
-  padding: 10px;
-  font-style: italic;
+.navigation a {
+  /*navigation class anchor tag, inside li, inside ul*/
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  display: block;
+  padding: .75em 1em;
+}
+
+.navigation a:hover {
+  background-color: #00488d;
+  /* background-color: #c4e881; */
 }
 
 .banner .flag {
@@ -114,10 +113,6 @@ h3 {
 .qualities {
   padding-left: 50px;
 }
-
-/* .flag { 
-  display: flex;
-}*/
 
 h4 {
   font-size: 3em;
@@ -132,3 +127,9 @@ textarea {
   display: block;
   margin: 1rem 0;
 }
+
+/*
+     Style the <footer> element
+     We can set the font-size, color and text-align properties here
+     and they will be inherited by elements contained within the <footer>
+   */
